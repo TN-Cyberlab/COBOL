@@ -7,9 +7,8 @@ procedure division.
     display "what is your name".
     accept username.
     display "hello, " username.
-    stop run.
+stop run.
     
-    *> to run this program,use cobc -x -free -o greet greet.cbl
-                                 ./greet
+    *> to run this program,use cobc -x -free -o greet greet.cbl && ./greet
 
 
