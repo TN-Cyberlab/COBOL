@@ -1,0 +1,62 @@
+1-6 is Sequence number area(for numbering program lines)
+7 is indicator area(special line for comments,debugging,continuation lines)
+8-11  is A area(for begin program elements;devision names,section names,paragraph names)
+12-72 is B area(for write cbl instructions,statemnts)
+73-80 is identification area(reference details)
+----------------------------------------------------------------------------------------------
+
+         AREA A ELEMENTS;
+i) Division names {
+                  - identification division(major part of program)
+                  - data division(data used by program)
+                  - procedure division(has executable instructions)
+                  - environment division
+                  }
+                  
+ ii) Section names {
+                   - file section(file records used by program)
+                   - working-storage section(has variables stored during program execution)
+                   }
+ 
+ iii) Paragraph names {
+                       - calculate-balance(a paragraph that contains instructions for calculate bal.)
+                      }
+ -----------------------------------------------------------------------------------------------------
+ 
+          COBOL RESERVED WORDS:
+ - identificaiton(begins id division)
+ - division(define major program division)
+ - program-id(program name)
+ - data(begins data division)
+ - working-storage(variables stored duirng execution)
+ - section(begins section)
+ - procedure(begins prcedure division)
+ - pic(data item format)
+ - value(assign value)
+ - display(output)
+ - accept(receive input)
+ - move(copy data from one item to another)
+ - read,write,compute
+ - add,subtract,multiply,divide
+ - evaluate(similar to switch)
+ - end-evaluate
+ - if(test condition)
+ - else(alternative action)
+ - end-if(ends if statemnt)
+ - perform(execute paragraph)
+ - end-perform
+ - stop run(terminate program)
+ - and,or,not
+ -------------------------------------------------------------------------------------------------------
+ 
+ * Divisions -> Sections -> Pararaphs -> Sentences -> Statemnets
+ ---------------------------------------------------------------------------------------------------
+ - so its variable declaration: pic 9(5) is any number btwn 0-9 for 5 digits,,pic x(10) is space for upto 10 alphabetic character
+ - 01 is used to declare a variable or data item in COBOL.
+ --------------------------------------------------------------------------------------------
+ 
+       WHERE NOT PUT PERIOD(.),,inside any statement that has "end" terminator.
+ - inside if blocks
+ - inside evaluate
+ - inside perform loops
+ - inside I/O conditions(read,write,compute)
