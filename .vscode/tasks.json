@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "COBOL: Build",
+      "type": "process",
+      "command": "cobc",
+      "args": [
+        "-x",
+        "-free",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "${file}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "COBOL: Build and run",
+      "type": "process",
+      "command": "${fileDirname}/${fileBasenameNoExtension}",
+      "dependsOn": "COBOL: Build",
+      "dependsOrder": "sequence",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
